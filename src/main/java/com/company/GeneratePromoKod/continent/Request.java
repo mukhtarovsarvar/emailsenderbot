@@ -12,9 +12,10 @@ public class Request extends Thread{
             try{Thread.sleep(20000);}catch(InterruptedException e){System.out.println(e);}
 
             try {
-                URL url = new URL("https://emailsenderbot.herokuapp.com/");
+                URL url = new URL("https://emailsenderbot.herokuapp.com/test");
                 HttpURLConnection con = (HttpURLConnection) url.openConnection();
                 con.setRequestMethod("GET");
+                System.out.println(con.getResponseCode());
                 System.out.println("zapros");
             } catch (IOException e) {
                 throw new RuntimeException(e);

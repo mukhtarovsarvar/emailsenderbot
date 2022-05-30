@@ -7,6 +7,7 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.Keyboard
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.KeyboardRow;
 
 import java.util.Arrays;
+import java.util.List;
 
 public class KeyboardButtonUtil {
     public static KeyboardButton buttonEmoji(String text, String emoji) {
@@ -27,7 +28,7 @@ public class KeyboardButtonUtil {
 
 
         ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
-        replyKeyboardMarkup.setKeyboard(Arrays.asList(row));
+        replyKeyboardMarkup.setKeyboard(List.of(row));
         replyKeyboardMarkup.setResizeKeyboard(true);
         return replyKeyboardMarkup;
     }
